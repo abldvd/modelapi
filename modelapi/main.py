@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-from modelapi import training
 
 app = FastAPI()
 
