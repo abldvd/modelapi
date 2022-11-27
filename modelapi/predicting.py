@@ -1,4 +1,4 @@
-from models import model
+from modelapi.models import model
 
 def predict(X, model):
     return model.predict(X)[0]

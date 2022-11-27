@@ -1,7 +1,7 @@
 import pandas as pd
 from fastapi import FastAPI
-from models import ModelInput, ModelOutput
-from predicting import get_parsed_prediction
+from modelapi.models import ModelInput, ModelOutput
+from modelapi.predicting import get_parsed_prediction
 
 app = FastAPI()
 
