@@ -42,5 +42,6 @@ RUN poetry install --no-dev
 ###############################################
 FROM python-base as production
 COPY --from=builder-base $PYSETUP_PATH $PYSETUP_PATH
-COPY ./modelapi /src/
-CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8080"]
+COPY ./modelapi /app/modelapi
+WORKDIR /app
+CMD ["uvicorn", "modelapi.main:app", "--host", "0.0.0.0", "--port", "8080"]
